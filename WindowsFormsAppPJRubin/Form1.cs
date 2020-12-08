@@ -56,10 +56,7 @@ namespace WindowsFormsAppPJRubin
             IEnumerable<IReadable> books = readingList.getItems();
 
             listBox1.Items.Clear();
-            //listBox1.Items = listController.GetItemDescriptionList();
 
-            listBox1.DisplayMember = "Title";
-            listBox1.DisplayMember = "author";
             foreach (Book book in books)
             {
                 listBox1.Items.Add(book);
