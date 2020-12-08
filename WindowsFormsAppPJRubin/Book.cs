@@ -27,6 +27,14 @@ namespace WindowsFormsAppPJRubin
             publishedYear = 0;
         }
 
+        public Book(string inTitle, Author inAuthor, string inPublisher)
+        {
+            title = inTitle;
+            author = inAuthor;
+            publisher = inPublisher;
+            publishedYear = 0;
+        }
+
         public Book(string inTitle, string inAuthor, string inPublisher)
         {
             title = inTitle;
@@ -47,6 +55,11 @@ namespace WindowsFormsAppPJRubin
         Author IReadable.author { get => author; set => author = value; }
         public string Publisher { get => publisher; set => publisher = value; }
         public int PublishedYear { get => publishedYear; set => publishedYear = value; }
+
+        public override string ToString()
+        {
+            return title + author.LastName;
+        }
         
     }
 }

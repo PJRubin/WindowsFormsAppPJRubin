@@ -15,7 +15,12 @@ namespace WindowsFormsAppPJRubin
         BookList readingList;
         public Form1()
         {
+            
             InitializeComponent();
+            readingList = new BookList();
+            
+
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -35,26 +40,29 @@ namespace WindowsFormsAppPJRubin
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            String title = TitleTextBox.Text.ToString();
-            String author = AuthorTextBox.Text.ToString();
-            String publisher = PublisherTextBox.Text.ToString();
-            Book book = new Book(title, author, publisher);
+           
+            string title = TitleTextBox.Text.ToString();
+            string authorfname = AuthorTextBox.Text.ToString();
+            
+            string publisher = PublisherTextBox.Text.ToString();
+            Book book = new Book(title, authorfname, publisher);
             readingList.addBook(book);
+            updateListBox();
 
         }
 
         private void updateListBox()
         {
-            IEnumerable<IReadable> books = readingList.GetItems();
+            IEnumerable<IReadable> books = readingList.getItems();
 
             listBox1.Items.Clear();
             //listBox1.Items = listController.GetItemDescriptionList();
 
-            listBox1.DisplayMember = "Description";
-            listBox1.ValueMember = "Id";
-            foreach (ShoppingItem item in items)
+            listBox1.DisplayMember = "Title";
+            listBox1.DisplayMember = "author";
+            foreach (Book book in books)
             {
-                listBox1.Items.Add(item);
+                listBox1.Items.Add(book);
             }
 
         }
