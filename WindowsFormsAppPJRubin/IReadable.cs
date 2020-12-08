@@ -4,11 +4,11 @@ using System.Text;
 
 namespace WindowsFormsAppPJRubin
 {
-    interface IReadable
+    public interface IReadable
     {
         string Title { get; set; }
 
-        string Author { get; set; }
+        Author author { get; set; }
 
         string Publisher { get; set; }
 

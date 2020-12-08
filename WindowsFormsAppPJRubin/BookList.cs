@@ -8,9 +8,49 @@ namespace WindowsFormsAppPJRubin
     {
         List<Book> bookList;
 
-        public BookList()
+        public BookList() 
         {
             bookList = new List<Book>();
+        }
+
+        public BookList(List<Book> inList)
+        {
+            bookList = inList;
+        }
+
+        public void addBook(Book inBook)
+        {
+            bookList.Add(inBook);
+        }
+
+        public IEnumerable<IReadable> getItems()
+        {
+            List<Book> newList = new List<Book>();
+
+            foreach (Book book in bookList)
+            {
+
+                    newList.Add(book);
+                
+            }
+
+            return newList;
+        }
+
+        public Book searchFor(string inTitle)
+        {
+            foreach (Book book in bookList)
+            {
+                if (book.Title.Equals(inTitle))
+                {
+                    return book;
+                    
+                }
+               
+
+            }
+            return new Book();
+
         }
     }
 }
