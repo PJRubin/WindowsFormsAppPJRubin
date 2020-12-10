@@ -58,7 +58,7 @@ namespace WindowsFormsAppPJRubin
 
         public override string ToString()
         {
-            return title + " by " + author.FirstName + " " + author.LastName;
+            return title + " by " + author.FirstName + " " + author.LastName + ", Publisher: " + publisher;
         }
         
     }
