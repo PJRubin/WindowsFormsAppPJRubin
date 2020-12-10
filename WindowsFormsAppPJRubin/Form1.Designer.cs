@@ -35,12 +35,13 @@ namespace WindowsFormsAppPJRubin
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.AuthorTextBox = new System.Windows.Forms.TextBox();
+            this.FNameTextBox = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.PublisherTextBox = new System.Windows.Forms.TextBox();
+            this.LNameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TitleTextBox
@@ -96,12 +97,12 @@ namespace WindowsFormsAppPJRubin
             this.label5.TabIndex = 5;
             this.label5.Text = "Author";
             // 
-            // AuthorTextBox
+            // FNameTextBox
             // 
-            this.AuthorTextBox.Location = new System.Drawing.Point(193, 237);
-            this.AuthorTextBox.Name = "AuthorTextBox";
-            this.AuthorTextBox.Size = new System.Drawing.Size(250, 47);
-            this.AuthorTextBox.TabIndex = 6;
+            this.FNameTextBox.Location = new System.Drawing.Point(193, 237);
+            this.FNameTextBox.Name = "FNameTextBox";
+            this.FNameTextBox.Size = new System.Drawing.Size(250, 47);
+            this.FNameTextBox.TabIndex = 6;
             // 
             // listBox1
             // 
@@ -130,6 +131,7 @@ namespace WindowsFormsAppPJRubin
             this.RemoveButton.TabIndex = 9;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // label6
             // 
@@ -147,17 +149,25 @@ namespace WindowsFormsAppPJRubin
             this.PublisherTextBox.Size = new System.Drawing.Size(250, 47);
             this.PublisherTextBox.TabIndex = 11;
             // 
+            // LNameTextBox
+            // 
+            this.LNameTextBox.Location = new System.Drawing.Point(487, 237);
+            this.LNameTextBox.Name = "LNameTextBox";
+            this.LNameTextBox.Size = new System.Drawing.Size(250, 47);
+            this.LNameTextBox.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1446, 1041);
+            this.Controls.Add(this.LNameTextBox);
             this.Controls.Add(this.PublisherTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.AuthorTextBox);
+            this.Controls.Add(this.FNameTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,12 +190,13 @@ namespace WindowsFormsAppPJRubin
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox AuthorTextBox;
+        private System.Windows.Forms.TextBox FNameTextBox;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox PublisherTextBox;
+        private System.Windows.Forms.TextBox LNameTextBox;
     }
 }
 

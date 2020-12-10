@@ -42,10 +42,12 @@ namespace WindowsFormsAppPJRubin
         {
            
             string title = TitleTextBox.Text.ToString();
-            string authorfname = AuthorTextBox.Text.ToString();
+            string authorfname = FNameTextBox.Text.ToString();
+            string authorlname = LNameTextBox.Text.ToString();
+            Author author = new Author(authorfname, authorlname);
             
             string publisher = PublisherTextBox.Text.ToString();
-            Book book = new Book(title, authorfname, publisher);
+            Book book = new Book(title, author, publisher);
             readingList.addBook(book);
             updateListBox();
 
@@ -62,6 +64,15 @@ namespace WindowsFormsAppPJRubin
                 listBox1.Items.Add(book);
             }
 
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            int item = listBox1.SelectedIndex;
+            Book selectedBook = (Book)listBox1.SelectedItem;
+            readingList.Remove(selectedBook);
+
+            updateListBox();
         }
     }
 }

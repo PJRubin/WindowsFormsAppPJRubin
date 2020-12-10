@@ -52,5 +52,10 @@ namespace WindowsFormsAppPJRubin
             return new Book();
 
         }
+
+        public void Remove(Book inBook)
+        {
+            bookList.Remove(inBook);
+        }
     }
 }
