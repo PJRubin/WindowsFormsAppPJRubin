@@ -18,6 +18,7 @@ namespace WindowsFormsAppPJRubin
             
             InitializeComponent();
             readingList = new BookList();
+            AddButton.Enabled = false;
             
 
 
@@ -51,6 +52,13 @@ namespace WindowsFormsAppPJRubin
             readingList.addBook(book);
             updateListBox();
 
+            TitleTextBox.Text = "";
+            FNameTextBox.Text = "";
+            LNameTextBox.Text = "";
+            PublisherTextBox.Text = "";
+
+            AddButton.Enabled = false;
+
         }
 
         private void updateListBox()
@@ -73,6 +81,11 @@ namespace WindowsFormsAppPJRubin
             readingList.Remove(selectedBook);
 
             updateListBox();
+        }
+
+        private void TitleTextBox_TextChanged(object sender, EventArgs e)
+        {
+            AddButton.Enabled = true;
         }
     }
 }

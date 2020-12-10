@@ -50,6 +50,7 @@ namespace WindowsFormsAppPJRubin
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(250, 47);
             this.TitleTextBox.TabIndex = 0;
+            this.TitleTextBox.TextChanged += new System.EventHandler(this.TitleTextBox_TextChanged);
             // 
             // label1
             // 
