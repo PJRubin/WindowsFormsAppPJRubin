@@ -35,6 +35,14 @@ namespace WindowsFormsAppPJRubin
             publishedYear = 0;
         }
 
+        public Book(string inTitle, string inPublisher, string fake)
+        {
+            title = inTitle;
+            author = new Author("Unknown", "");
+            publisher = inPublisher;
+            publishedYear = 0;
+        }
+
 
 
         public string Title { get => title; set => title = value; }

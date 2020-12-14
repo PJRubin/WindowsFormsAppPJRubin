@@ -41,14 +41,22 @@ namespace WindowsFormsAppPJRubin
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-           
+            Book book;
             string title = TitleTextBox.Text.ToString();
             string authorfname = FNameTextBox.Text.ToString();
             string authorlname = LNameTextBox.Text.ToString();
             Author author = new Author(authorfname, authorlname);
-            
             string publisher = PublisherTextBox.Text.ToString();
-            Book book = new Book(title, author, publisher);
+
+            if(authorfname.Equals("") && authorlname.Equals(""))
+            {
+                book = new Book(title, publisher, "");
+            }
+            else
+            {
+                book = new Book(title, author, publisher);
+            }       
+                
             readingList.addBook(book);
             updateListBox();
 
