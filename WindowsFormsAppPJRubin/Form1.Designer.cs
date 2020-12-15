@@ -48,6 +48,7 @@ namespace WindowsFormsAppPJRubin
             // 
             this.TitleTextBox.Location = new System.Drawing.Point(193, 149);
             this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.PlaceholderText = "title";
             this.TitleTextBox.Size = new System.Drawing.Size(250, 47);
             this.TitleTextBox.TabIndex = 0;
             this.TitleTextBox.TextChanged += new System.EventHandler(this.TitleTextBox_TextChanged);
@@ -102,6 +103,7 @@ namespace WindowsFormsAppPJRubin
             // 
             this.FNameTextBox.Location = new System.Drawing.Point(193, 237);
             this.FNameTextBox.Name = "FNameTextBox";
+            this.FNameTextBox.PlaceholderText = "First Name";
             this.FNameTextBox.Size = new System.Drawing.Size(250, 47);
             this.FNameTextBox.TabIndex = 6;
             // 
@@ -149,6 +151,7 @@ namespace WindowsFormsAppPJRubin
             // 
             this.PublisherTextBox.Location = new System.Drawing.Point(193, 331);
             this.PublisherTextBox.Name = "PublisherTextBox";
+            this.PublisherTextBox.PlaceholderText = "publisher";
             this.PublisherTextBox.Size = new System.Drawing.Size(250, 47);
             this.PublisherTextBox.TabIndex = 11;
             // 
@@ -156,6 +159,7 @@ namespace WindowsFormsAppPJRubin
             // 
             this.LNameTextBox.Location = new System.Drawing.Point(487, 237);
             this.LNameTextBox.Name = "LNameTextBox";
+            this.LNameTextBox.PlaceholderText = "Last Name";
             this.LNameTextBox.Size = new System.Drawing.Size(250, 47);
             this.LNameTextBox.TabIndex = 12;
             // 
