@@ -73,9 +73,9 @@ namespace WindowsFormsAppPJRubin
 
         }
 
-        private void updateListBox()
+        private async void updateListBox()
         {
-            IEnumerable<IReadable> books = readingList.getItems();
+            IEnumerable<IReadable> books = await readingList.asyncGetItems();
 
             listBox1.Items.Clear();
 

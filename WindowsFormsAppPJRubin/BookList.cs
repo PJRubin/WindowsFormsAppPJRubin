@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace WindowsFormsAppPJRubin
 {
@@ -56,6 +57,11 @@ namespace WindowsFormsAppPJRubin
         public void Remove(Book inBook)
         {
             bookList.Remove(inBook);
+        }
+
+        public async Task<IEnumerable<IReadable>> asyncGetItems()
+        {
+           return await Task.Run(() => this.getItems());
         }
     }
 }
