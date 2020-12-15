@@ -16,5 +16,10 @@ namespace WindowsFormsAppPJRubin
 
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
+
+        public string toString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }

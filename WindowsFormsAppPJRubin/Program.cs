@@ -14,6 +14,8 @@ namespace WindowsFormsAppPJRubin
         [STAThread]
         static void Main()
         {
+            ReadXML re = new ReadXML();
+            re.readXML();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

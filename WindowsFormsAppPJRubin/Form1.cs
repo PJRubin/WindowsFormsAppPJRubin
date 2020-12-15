@@ -19,8 +19,12 @@ namespace WindowsFormsAppPJRubin
             InitializeComponent();
             readingList = new BookList();
             AddButton.Enabled = false;
-            
 
+            ReadXML read = new ReadXML();
+            Book b = read.readXML();
+            readingList.addBook(b);
+
+            updateListBox();
 
         }
 
